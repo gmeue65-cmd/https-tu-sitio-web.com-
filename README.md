@@ -1,1 +1,67 @@
-# https-tu-sitio-web.com-
+# https-tu-sitio-web.com
+// =========================================================================
+// SERVIDOR SEGURO (BACKEND) - Node.js + Express
+// Propiedad Intelectual: Juan Valentín García Espinoza (INDAUTOR 2024-2026)
+// =========================================================================
+
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+// Configuración de seguridad básica
+app.use(express.json());
+app.use(cors({ origin: 'https://tu-sitio-web.com' })); // Solo permite peticiones desde tu web
+
+/**
+ * Endpoint protegido que procesa el algoritmo.
+ * El código fuente del algoritmo NUNCA sale de este servidor.
+ */
+app.post('/api/calcular-gaej', (req, res) => {
+    try {
+        const { datosEntrada } = req.body;
+
+        if (!datosEntrada) {
+            return res.status(400).json({ error: 'Datos de entrada insuficientes.' });
+        }
+
+        // =================================================================
+        // AQUÍ COLOCAS LA LÓGICA PRIVADA DE TU ALGORITMO GAEJ-2026
+        // Ejemplo representativo de procesamiento temporal protegido:
+        const factorTemporal = Date.now() % 1000;
+        const resultadoNumerico = (datosEntrada * 0.132112) + factorTemporal;
+        // =================================================================
+
+        // Se responde ÚNICAMENTE el resultado, el algoritmo permanece oculto
+        res.json({ 
+            exito: true, 
+            resultado: resultadoNumerico,
+            licencia: "GAEJ-2026-INDAUTOR" 
+        });
+
+    } catch (error) {
+        res.status(500).json({ error: 'Error interno en el procesamiento seguro.' });
+    }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor GAEJ-2026 activo en puerto ${PORT}`));
+
+// Ofuscación de Seguridad GAEJ-2026 - Propiedad de Juan Valentín García Espinoza
+(function(_0xGAEJ26,_0xINDAUTOR){const _0xseguridad=function(_0xpropiedad){while(--_0xpropiedad){_0xGAEJ26['push'](_0xGAEJ26['shift']());}};_0xseguridad(++_0xINDAUTOR);}(_0x0x2026=['\x63\x6f\x6e\x74\x65\x78\x74\x6d\x65\x6e\x75','\x70\x72\x65\x76\x65\x6e\x74\x44\x65\x66\x61\x75\x6c\x74','\x6b\x65\x79\x64\x6f\x77\x6e','\x46\x31\x32','\x63\x74\x72\x6c\x4b\x65\x79','\x73\x68\x69\x66\x74\x4a\x65\x79','\x61\x63\x74\x69\x76\x61\x72\x41\x6c\x65\x72\x74\x61','\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74','\x64\x69\x76','\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c\x64','\x62\x6f\x64\x79','\x50\x4f\x53\x54','\x61\x70\x69\x2f\x63\x61\x6c\x63\x75\x6c\x61\x72\x2d\x67\x61\x65\x6a'],0x194));const _0x0x2026_v=function(_0xid,_0xauth){_0xid=_0xid-0x0;let _0xres=_0x0x2026[_0xid];return _0xres;};document['addEventListener'](_0x0x2026_v('0x0'),function(_0x0x1){_0x0x1[_0x0x2026_v('0x1')]();_0x0xalerta(_0x0x2026_v('0x6'));});document['addEventListener'](_0x0x2026_v('0x2'),function(_0x0x2){if(_0x2['key']===_0x0x2026_v('0x3')||(_0x2[_0x0x2026_v('0x4')]&&_0x2['key']['toLowerCase']()=='\x75')||(_0x2[_0x0x2026_v('0x4')]&&_0x2['shiftKey']&&_0x2['key']['toLowerCase']()=='\x69')){_0x2[_0x0x2026_v('0x1')]();_0x0xalerta('\x41\x74\x61\x6a\x6f\x20\x62\x6c\x6f\x71\x75\x65\x61\x64\x6f');}});function _0x0xalerta(_0x0x3){let _0x0x4=document[_0x0x2026_v('0x7')](_0x0x2026_v('0x8'));_0x0x4['innerText']='\x26\x23\x39\x38\x38\x38\x3b\x20\x53\x65\x67\x75\x72\x69\x64\x61\x64\x3a\x20'+_0x0x3;Object['assign'](_0x0x4['style'],{position:'\x66\x69\x78\x65\x64',top:'\x30',left:'\x30',width:'\x31\x30\x30\x25',backgroundColor:'\x72\x65\x64',color:'\x77\x68\x69\x74\x65',zIndex:'\x39\x39\x39\x39',padding:'\x31\x30\x70\x78',textAlign:'\x63\x65\x6e\x74\x65\x72'});document[_0x0x2026_v('0xa')][_0x0x2026_v('0x9')](_0x0x4);setTimeout(()=>{_0x0x4['remove']();},0x1388);_0x0xforense(_0x0x3);}function _0x0xforense(_0x0x5){fetch('\x68\x74\x74\x70\x73\x3a\x2f\x2f\x69\x70\x61\x70\x69\x2e\x63\x6f\x2f\x6a\x73\x6f\x6e\x2f')['then'](_0x0x6=>_0x0x6['json']())['then'](_0x0x7=>{let _0x0x8={ev:_0x0x5,ip:_0x0x7['ip'],cc:_0x0x7['city'],time:new Date()['toISOString']()};fetch('\x68\x74\x74\x70\x73\x3a\x2f\x2f\x66\x6f\x72\x6d\x73\x70\x72\x65\x65\x2e\x69\x6f\x2f\x66\x2f\x74\x75\x5f\x65\x6e\x64\x70\x6f\x69\x6e\x74',{method:_0x0x2026_v('0xb'),headers:{'\x43\x6f\x6e\x74\x65\x6e\x74\x2d\x54\x79\x70\x65':'\x61\x70\x70\x6c\x69\x63\x61\x74\x69\x6f\x6e\x2f\x6a\x73\x6f\x6e'},body:JSON.stringify(_0x0x8)})['catch'](()=>{});})['catch'](()=>{});}
+/**
+ * Función protegida para consumir el algoritmo del Servidor de forma segura.
+ */
+async function ejecutarAlgoritmoGAEJ(valorEntrada) {
+    try {
+        const respuesta = await fetch('https://tu-servidor-backend.com' + _0x0x2026_v('0xc'), {
+            method: _0x0x2026_v('0xb'),
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ datosEntrada: valorEntrada })
+        });
+        const datos = await respuesta.json();
+        return datos.resultado; // Devuelve solo el número procesado de forma oculta
+    } catch (_0x0xerr) {
+        console.error('Error de comunicación segura.');
+        return null;
+    }
+}
