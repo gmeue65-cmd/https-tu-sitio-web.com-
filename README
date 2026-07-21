@@ -1,4 +1,4 @@
-# 🛡️ https-tu-sitio-web.com-SERVIDOR SEGURO (BACKEND) - Node.js + ExpressPropiedad Intelectual: **Juan Valentín García Espinoza (INDAUTOR1994-2026 todos los derechos reservados** const express require('express');const cors = require('cors');const app = express();Configuración de seguridad básica app.use(express.json());app.use(cors({ origin: 'https://tu-sitio-web.com' })); //Solo permite peticiones desde tu webEndpoint protegido que procesa el algoritmo.El código fuente del algoritmo NUNCA sale de este servidor.app.post('/api/calcular-gaej', (req, res) => try { const { datosEntrada } = req.body;if (!datosEntrada) return res.status(400).json({ error: 'Datos de entrada insuficientes.' });
+# 🛡️ https://www.android.com-SERVIDOR SEGURO (BACKEND) - Node.js + ExpressPropiedad Intelectual: **Juan Valentín García Espinoza (INDAUTOR1994-2026 todos los derechos reservados** const express require('express');const cors = require('cors');const app = express();Configuración de seguridad básica app.use(express.json());app.use(cors({ origin: 'https://tu-sitio-web.com' })); //Solo permite peticiones desde tu webEndpoint protegido que procesa el algoritmo.El código fuente del algoritmo NUNCA sale de este servidor.app.post('/api/calcular-gaej', (req, res) => try { const { datosEntrada } = req.body;if (!datosEntrada) return res.status(400).json({ error: 'Datos de entrada insuficientes.' });
         }
 
         // =================================================================
@@ -30,7 +30,7 @@ app.listen(PORT, () => console.log(`Servidor GAEJ-2026 activo en puerto ${PORT}`
  */
 async function ejecutarAlgoritmoGAEJ(valorEntrada) {
     try {
-        const respuesta = await fetch('https://tu-servidor-backend.com' + _0x0x2026_v('0xc'), {
+        const respuesta = await fetch('https://www.android.com-backend' + _0x0x2026_v('0xc'), {
             method: _0x0x2026_v('0xb'),
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ datosEntrada: valorEntrada })
